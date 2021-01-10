@@ -40,7 +40,7 @@ $(function(){
 
     // クリップボードへのコピー機能
     $('#copyTarget').css('display', 'block');
-    $('#copyTarget').val('#BigTweet https://[アプリ名].herokuapp.com?h=${hash}');
+    $('#copyTarget').val('#BigTweet https://bigtweet-techpit-20200110.herokuapp.com?h=${hash}');
       var copyTarget = document.getElementById("copyTarget"); // コピー対象のテキストを選択する
       copyTarget.select();
       // 選択しているテキストをクリップボードにコピーする
@@ -65,12 +65,12 @@ $(function(){
           type: 'success',
           // title: 'Let\'s BigTweet!',
           text: '画像完成！\nLet\'s BigTweet!',
-          imageUrl: `https://s3-ap-northeast-1.amazonaws.com/[バケット名]/images/${hash}.png`,
+          imageUrl: `https://s3-ap-northeast-1.amazonaws.com/bigtweet-tawara-0110-production/images/${hash}.png`,
           imageWidth: 315,
           imageAlt: 'Custom image',
           showConfirmButton: false,
           showCloseButton: true,
-          footer: `<a href=https://twitter.com/share?text=%23BigTweet&url=https://[アプリ名].herokuapp.com?h=${hash} class=share_btn2>Twitterシェア</a>`,
+          footer: `<a href=https://twitter.com/share?text=%23BigTweet&url=https://bigtweet-techpit-20200110.herokuapp.com.herokuapp.com?h=${hash} class=share_btn2>Twitterシェア</a>`,
         })
       });
     });

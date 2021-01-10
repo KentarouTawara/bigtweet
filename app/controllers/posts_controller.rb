@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   def bucket
     # production / development / test
     environment = Rails.env
-    storage.directories.get("[バケット名]-#{environment}")
+    storage.directories.get("bigtweet-tawara-0110-#{environment}")
   end
 
   # storageを生成する
