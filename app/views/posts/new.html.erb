@@ -1,0 +1,42 @@
+<div>
+  <%= image_tag 'top.png', width: '315' %>
+</div>
+
+<div>
+  <p>文字が入った画像を簡単作成！<br>気軽にBigTweet！！</p>
+</div>
+
+<%= form_with(model: @post, local: true, id: 'aaa') do |form| %>
+  <div class="form-group">
+    <p>背景画像選択</p>
+    <label><%= form.radio_button :kind, "year" %><%= image_tag 'year.png', width: '90' %></label>
+  </div>
+
+  <div class="form-group">
+    <p>画像内の文字入力</p>
+    <%= form.text_area :input, id: 'input', class:'form-control', rows:"3" %>
+  </div>
+
+  <p>プレビュー</p>
+  <div id="screenshot-target">
+    <img id="preview-image" width="315">
+    <p id="preview-font"></p>
+  </div>
+  <br>
+<% end %>
+
+<button id="left" class="up share_btn"><i class="fa fa-arrow-left"></i></button>
+<button id="down" class="up share_btn"><i class="fa fa-arrow-down"></i></button>
+<button id="up" class="up share_btn"><i class="fa fa-arrow-up"></i></button>
+<button id="right" class="up share_btn"><i class="fa fa-arrow-right"></i></button>
+<br>
+<br>
+<button id="word-bigger" class="size share_btn"><i class="fa fa-search-plus"></i></button>
+<button id="word-smaller" class="size share_btn"><i class="fa fa-search-minus"></i></button>
+<button id="vertical" class="vertical share_btn"><i class="fa fa-ellipsis-v"></i></button>
+<button id="font-color" class="font-color share_btn"><i class="fa fa-tint"></i></button>
+<button id="font" class="font-color share_btn"><i class="fa fa-font"></i></button>
+<br>
+<br>
+<button id="save-button" class="square_btn"><i class="fa fa-check"></i> 画像を確認する</button>
+<input style="display: none;" id="copyTarget" type="text" value="コピー">
